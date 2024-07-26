@@ -7,6 +7,7 @@ import "./assets/img/4geeks.ico";
 
 window.onload = function() {
   generatedCard();
+  setInterval(generatedCard, 5000);
 };
 function generatedCard() {
   let selectedSuit = randomSuit();
@@ -57,11 +58,22 @@ let card = document.querySelector(".card");
 
 let widthButton = document.getElementById("changeWidth");
 widthButton.addEventListener("click", () => {
-  let getWidthInput = document.getElementById("widthInput").value.trim();
-  card.style.setProperty("width", getWidthInput);
+  let getWidthInput = document.getElementById("widthInput").value;
+  if (getWidthInput < "150") {
+    alert("Please set a value above 150");
+  } else {
+    card.style.width = getWidthInput + "px";
+  }
+  document.getElementById("widthInput").value = "";
 });
+
 let heightButton = document.getElementById("changeHeight");
 heightButton.addEventListener("click", () => {
-  let getHeightInput = document.getElementById("heightInput").value.trim();
-  card.style.setProperty("height", getHeightInput);
+  let getHeightInput = document.getElementById("heightInput").value;
+  if (getHeightInput < "450") {
+    alert("Please set a value above 450");
+  } else {
+    card.style.height = getHeightInput + "px";
+  }
+  document.getElementById("heightInput").value = "";
 });
