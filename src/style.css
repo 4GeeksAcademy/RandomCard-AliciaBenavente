@@ -103,6 +103,7 @@ body {
 #bottomImage {
   line-height: 160px;
   margin-right: 20px;
+  transform: rotate(180deg);
 }
 
 #number {
@@ -113,4 +114,23 @@ body {
 
 .red {
   color: red;
+}
+
+form {
+  margin-top: 300px;
+  margin-left: 150px;
+  position: relative;
+  display: inline-flex;
+}
+#widthDiv,
+#heightDiv {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+button {
+  margin-top: 20px;
+  height: 30px;
+  width: 150px;
 }

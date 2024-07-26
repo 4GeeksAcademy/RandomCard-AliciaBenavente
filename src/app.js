@@ -52,3 +52,16 @@ let randomSuit = function generateRandomSuit() {
 button.addEventListener("click", function() {
   generatedCard();
 });
+
+let card = document.querySelector(".card");
+
+let widthButton = document.getElementById("changeWidth");
+widthButton.addEventListener("click", () => {
+  let getWidthInput = document.getElementById("widthInput").value.trim();
+  card.style.setProperty("width", getWidthInput);
+});
+let heightButton = document.getElementById("changeHeight");
+heightButton.addEventListener("click", () => {
+  let getHeightInput = document.getElementById("heightInput").value.trim();
+  card.style.setProperty("height", getHeightInput);
+});
